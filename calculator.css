@@ -1,0 +1,61 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    background-color: purple;
+}
+.container {
+    display: grid;
+    width: 100vw;
+    height: 100vh;
+    place-items: center;/* place-item = is used to move elements of the grid type */
+}
+.calculator {
+    width: auto;/* setting height and width to auto will help them adjust acc. to the content inside them */
+    height: auto;
+    background-color: aliceblue;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 30px black;
+}
+button {
+    height: 60px;
+    width: 60px;
+    margin: 5px;
+    font-size: 20px;
+    font-weight: 700;
+    border-radius: 10px;
+    border: 0;
+    background-color: black;
+    color: azure;
+    box-shadow: 0 0 10px bisque;
+    cursor: pointer; 
+}
+#display {
+    height: 140px;
+    width: auto;
+    margin: 9px;
+    border-radius: 10px;
+    display: flex;
+    align-items: end;/* set to end to make sure numbers entered in display show on the lower-left side of the display box */
+    justify-content: end;
+    font-size: 30px;
+    font-weight: 600;
+}
+button#clear {
+    background-color: crimson;
+}
+button#equal {
+    background-color: grey;
+    color: black;
+}
+button:hover {
+    animation: affect 0.1s ease-out forwards;/* forward= holds the incresed size of the button */
+}
+@keyframes affect {
+    100% {
+        transform: scale(1.08);
+    }
+}
